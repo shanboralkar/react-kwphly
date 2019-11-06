@@ -6,12 +6,12 @@ import UserTable from "./table/UserTable";
 const App = () => {
   // Data
   const usersData = [
-    { id: 1, name: "Tania", email: "tania@abc.com", contact: 989898757 },
-    { id: 2, name: "Craig", email: "craig@abc.com", contact: 999898757 },
-    { id: 3, name: "Ben", email: "ben@abc.com", contact: 979898757 }
+    { id: 1, name: "Tania", email: "tania@abc.com", contact: 989898757,status:"Active" },
+    { id: 2, name: "Craig", email: "craig@abc.com", contact: 999898757,status:"Inactive" },
+    { id: 3, name: "Ben", email: "ben@abc.com", contact: 979898757,status:"Active" }
   ];
 
-  const initialFormState = { id: null, name: "", email: "", contact: "" };
+  const initialFormState = { id: null, name: "", email: "", contact: "",status:"" };
 
   // Setting state
   const [users, setUsers] = useState(usersData);
@@ -40,7 +40,8 @@ const App = () => {
       id: user.id,
       name: user.name,
       email: user.email,
-      contact: user.contact
+      contact: user.contact,
+      status: user.status
     });
   };
 

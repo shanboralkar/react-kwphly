@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 
 const EditUserForm = props => {
   const [user, setUser] = useState(props.currentUser);
-
+  let checked = user.status === "Active" ? "true" : "";
+  let unchecked = user.status === "Inactive" ? "true" : "";
   useEffect(() => {
     setUser(props.currentUser);
   }, [props]);
@@ -51,6 +52,34 @@ const EditUserForm = props => {
         placeholder="Contact"
         required
       />
+      <br />
+      <label for="Email">Status:</label>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input
+            type="radio"
+            className="form-check-input"
+            name="status"
+            value="Active"
+            onChange={handleInputChange}
+            checked={checked}
+          />
+          Active
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input
+            type="radio"
+            className="form-check-input"
+            name="status"
+            value="Inactive"
+            onChange={handleInputChange}
+            checked={unchecked}
+          />
+          Inactive
+        </label>
+      </div>
       <br />
       <button class="button btn btn-primary">Update user</button>
       <button

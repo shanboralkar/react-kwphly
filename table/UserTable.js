@@ -1,13 +1,13 @@
 import React from "react";
 
-const UserTable = props => (
-  <div className="container">
+const UserTable = props => (  
     <table className="table table-striped ">
       <thead>
         <tr>
           <th>Name</th>
           <th>Email</th>
           <th>Contact</th>
+          <th>Status</th>
           <th>Actions</th>
         </tr>
       </thead>
@@ -18,6 +18,7 @@ const UserTable = props => (
               <td>{user.name}</td>
               <td>{user.email}</td>
               <td>{user.contact}</td>
+              <td>{user.status}</td>
               <td>
                 <button
                   onClick={() => {
@@ -42,8 +43,7 @@ const UserTable = props => (
           </tr>
         )}
       </tbody>
-    </table>
-  </div>
+    </table>  
 );
 
 export default UserTable;

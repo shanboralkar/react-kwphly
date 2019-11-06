@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const AddUserForm = props => {
-  const initialFormState = { id: null, name: "", email: "", contact: "" };
+  const initialFormState = { id: null, name: "", email: "", contact: "",status:"Active" };
   const [user, setUser] = useState(initialFormState);
 
   const handleInputChange = event => {
@@ -52,6 +52,34 @@ const AddUserForm = props => {
           placeholder="Contact"
           required
         />
+        <br />
+        <label for="Email">Status:</label>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input
+              type="radio"
+              className="form-check-input"
+              name="status"
+              value="Active"
+              onChange={handleInputChange}
+              checked
+            />
+            Active
+          </label>
+        </div>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input
+              type="radio"
+              className="form-check-input"
+              name="status"
+              value="Inactive"
+              onChange={handleInputChange}
+            />
+            Inactive
+          </label>
+        </div>
+        <br />
         <br />
         <button className="btn btn-primary">Add new user</button>
       </form>
