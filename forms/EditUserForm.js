@@ -53,9 +53,9 @@ const EditUserForm = props => {
         required
       />
       <br />
-      <label for="Email">Status:</label>
-      <div class="form-check">
-        <label class="form-check-label">
+      <label htmlFor="Email">Status:</label>
+      <div className="form-check">
+        <label className="form-check-label">
           <input
             type="radio"
             className="form-check-input"
@@ -67,8 +67,8 @@ const EditUserForm = props => {
           Active
         </label>
       </div>
-      <div class="form-check">
-        <label class="form-check-label">
+      <div className="form-check">
+        <label className="form-check-label">
           <input
             type="radio"
             className="form-check-input"
@@ -81,7 +81,7 @@ const EditUserForm = props => {
         </label>
       </div>
       <br />
-      <button class="button btn btn-primary">Update user</button>
+      <button className="button btn btn-primary">Update user</button>
       <button
         onClick={() => props.setEditing(false)}
         className="button btn btn-secondary"

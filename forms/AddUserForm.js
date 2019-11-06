@@ -19,10 +19,9 @@ const AddUserForm = props => {
           props.addUser(user);
           setUser(initialFormState);
         }}
-        className="needs-validation"
-        novalidate
+        className="needs-validation"        
       >
-        <label for="Name">Name:</label>
+        <label htmlFor="Name">Name:</label>
         <input
           type="text"
           name="name"
@@ -32,7 +31,7 @@ const AddUserForm = props => {
           placeholder="Name"
           required
         />
-        <label for="Email">Email:</label>
+        <label htmlFor="Email">Email:</label>
         <input
           type="email"
           name="email"
@@ -42,7 +41,7 @@ const AddUserForm = props => {
           placeholder="Email"
           required
         />
-        <label for="Contact">Contact:</label>
+        <label htmlFor="Contact">Contact:</label>
         <input
           type="number"
           name="contact"
@@ -53,9 +52,9 @@ const AddUserForm = props => {
           required
         />
         <br />
-        <label for="Email">Status:</label>
-        <div class="form-check">
-          <label class="form-check-label">
+        <label htmlFor="Email">Status:</label>
+        <div className="form-check">
+          <label className="form-check-label">
             <input
               type="radio"
               className="form-check-input"
@@ -67,8 +66,8 @@ const AddUserForm = props => {
             Active
           </label>
         </div>
-        <div class="form-check">
-          <label class="form-check-label">
+        <div className="form-check">
+          <label className="form-check-label">
             <input
               type="radio"
               className="form-check-input"
