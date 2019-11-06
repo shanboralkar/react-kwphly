@@ -52,10 +52,10 @@ const EditUserForm = props => {
         required
       />
       <br />
-      <button class="btn btn-primary">Update user</button>
+      <button class="button btn btn-primary">Update user</button>
       <button
         onClick={() => props.setEditing(false)}
-        className="btn btn-secondary"
+        className="button btn btn-secondary"
       >
         Cancel
       </button>
